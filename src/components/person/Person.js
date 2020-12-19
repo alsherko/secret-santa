@@ -14,8 +14,7 @@ export const Person = ({ person, removePerson }) => {
 
   return (
     <>
-      <h3 id="added-person-heading">Added Person</h3>
-      <ul aria-labelledby="added-person-heading">
+      <ul>
         {groups.map((group) => {
           const groupId = `person-group-${group.group ?? UNDEFINED_GROUP}`
           return (

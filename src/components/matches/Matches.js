@@ -6,7 +6,7 @@ import matchPairs from './match-pairs'
 import './matches.css'
 
 const errorMessage =
-    'Невозможно совпадение с указанными людьми, или произошла ошибка. Пожалуйста, попробуйте еще раз или измените свою конфигурацию, чтобы позволить каждому совпадать с кем-то.'
+  'Невозможно совпадение с указанными людьми, или произошла ошибка. Пожалуйста, попробуйте еще раз или измените свою конфигурацию, чтобы позволить каждому совпадать с кем-то.'
 
 export const Matches = ({ person }) => {
   const [pairs, setPairs] = useState([])
@@ -22,7 +22,6 @@ export const Matches = ({ person }) => {
     try {
       setPairs(matchPairs(person))
     } catch (e) {
-      console.error(e)
       setError(new Error(errorMessage))
       setPairs([])
     }
@@ -37,12 +36,16 @@ export const Matches = ({ person }) => {
       >
         Совпадения
       </button>
-      <label>
+      <label
+        style={{
+          paddingLeft: '15px',
+        }}
+      >
         <input
           type="checkbox"
           onChange={() => setShowGroups((prevState) => !prevState)}
           checked={showGroups}
-        />{' '}
+        />
         Показывать группы
       </label>
       {error && <p className="error">{error.message}</p>}
