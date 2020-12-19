@@ -1,13 +1,13 @@
-export const mapPeopleByGroup = (people) =>
-  people
+export const mapPersonByGroup = (person) =>
+  person
     .reduce((acc, person) => {
       const group = acc.find((item) => item.group === (person.group ?? null))
       if (group) {
-        group.people.push(person)
+        group.person.push(person)
       } else {
         acc.push({
           group: person.group ?? null,
-          people: [person],
+          person: [person],
         })
       }
       return acc

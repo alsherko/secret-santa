@@ -1,21 +1,21 @@
 import { useMemo } from 'react'
 
 import { RemoveButton } from '../../common/RemoveButton'
-import { mapPeopleByGroup } from './utils'
+import { mapPersonByGroup } from './utils'
 
 const UNDEFINED_GROUP = 'fba449b5-deb3-400c-991c-4bac2bb1ad33'
 
-export const Person = ({ people, removePeople }) => {
-  const groups = useMemo(() => mapPeopleByGroup(people), [people])
+export const Person = ({ person, removePerson }) => {
+  const groups = useMemo(() => mapPersonByGroup(person), [person])
 
-  if (!people.length) {
+  if (!person.length) {
     return null
   }
 
   return (
     <>
-      <h3 id="added-people-heading">Added People</h3>
-      <ul aria-labelledby="added-people-heading">
+      <h3 id="added-person-heading">Added Person</h3>
+      <ul aria-labelledby="added-person-heading">
         {groups.map((group) => {
           const groupId = `person-group-${group.group ?? UNDEFINED_GROUP}`
           return (
@@ -24,9 +24,9 @@ export const Person = ({ people, removePeople }) => {
                 {group.group === null ? 'Нет группы' : group.group}
               </span>
               <ul aria-labelledby={groupId}>
-                {group.people.map((p) => (
+                {group.person.map((p) => (
                   <li key={p.name}>
-                    {p.name} <RemoveButton onClick={() => removePeople(p)} />
+                    {p.name} <RemoveButton onClick={() => removePerson(p)} />
                   </li>
                 ))}
               </ul>
