@@ -1,4 +1,4 @@
-import {Person} from "./Person";
-import {PersonForm} from "./PersonForm";
+import { Person } from './Person'
+import { PersonForm } from './PersonForm'
 
-export {Person, PersonForm}
+export { Person, PersonForm }

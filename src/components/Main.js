@@ -1,7 +1,7 @@
 import { useMemo } from 'react'
 import { Tab, TabList, TabPanels, Tabs, TabPanel } from '@reach/tabs'
 
-import {Matches} from "./matches/Matches";
+import { Matches } from './matches/Matches'
 import { PersonForm, Person } from './person'
 
 import { useStoredState } from '../common/useStoredState'
@@ -57,7 +57,7 @@ export const Main = () => {
             <Person person={person} removePerson={removePerson} />
           </TabPanel>
           <TabPanel>
-                <Matches person={person} />
+            <Matches person={person} />
           </TabPanel>
         </TabPanels>
       </Tabs>

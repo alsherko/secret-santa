@@ -52,7 +52,8 @@ export const PersonForm = ({ usedNames, usedGroups, onSubmit }) => {
           ))}
         </datalist>
         <p className="meta">
-          Используйте группы для простых исключений, люди в одной группе не попадают друг другу.
+          Используйте группы для простых исключений, люди в одной группе не
+          попадают друг другу.
         </p>
         <button type="submit">Добавить человека</button>
       </fieldset>
