@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 
-import { encryptString } from './utils'
+import { encryptString } from '../../common/utils'
 
 export const CopyReceiver = ({ giver, receiver }) => {
   const [copyText, setCopyText] = useState('Copy link')
