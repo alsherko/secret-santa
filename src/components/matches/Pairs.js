@@ -1,3 +1,5 @@
+import { CopyReceiver } from './CopyReceiver'
+
 export const Pairs = ({ pairs, showGroups }) => {
   if (pairs.length < 1) {
     return null
@@ -24,7 +26,9 @@ export const Pairs = ({ pairs, showGroups }) => {
           <tr key={a.name}>
             <td>{a.name}</td>
             {showGroups && <td>{a.group}</td>}
-            <td>{b.name}</td>
+            <td>
+              <CopyReceiver giver={a.name} receiver={b.name} />
+            </td>
             {showGroups && <td>{b.group}</td>}
           </tr>
         ))}
