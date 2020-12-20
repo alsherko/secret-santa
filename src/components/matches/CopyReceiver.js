@@ -15,7 +15,7 @@ export const CopyReceiver = ({ giver, receiver }) => {
 
   return (
     <CopyToClipboard
-      text={`${window.location.origin.toString()}/?giver=${giver}&key=${encryptString(
+      text={`${window.location.origin.toString()}/secret-santa/?giver=${giver}&key=${encryptString(
         receiver
       )}`}
     >

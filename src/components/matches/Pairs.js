@@ -6,7 +6,11 @@ export const Pairs = ({ pairs, showGroups }) => {
   }
 
   return (
-    <table>
+    <table
+      style={{
+        marginTop: '15px',
+      }}
+    >
       <thead>
         <tr>
           <th colSpan={showGroups ? 2 : 1}>Тайный санта</th>

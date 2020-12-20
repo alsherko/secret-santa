@@ -1,0 +1,25 @@
+.container {
+    border-radius: 0.8rem;
+    /*background-colo;*/
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.05);
+}
+
+.note {
+    padding: 1rem 2rem;
+    text-align: center;
+}
+
+.note__title, .note__santa {
+    text-transform: capitalize;
+}
+
+.note__santa {
+    color: red;
+}
+
+.note__image {
+    margin: 1rem;
+    width: 4rem;
+}
